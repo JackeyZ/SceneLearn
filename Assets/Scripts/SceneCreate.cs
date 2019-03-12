@@ -17,7 +17,7 @@ public class SceneCreate : MonoBehaviour
     }
     private IEnumerator LoadScene()
     {
-        WWW download = WWW.LoadFromCacheOrDownload("file://" + Application.dataPath + "/Scene_02.unity3d", 1);  
+        WWW download = WWW.LoadFromCacheOrDownload("file://" + Application.dataPath + "/ScenesPack/Scene_02.unity3d", 1);  
         yield return download;
         var bundle = download.assetBundle;
         AsyncOperation ao = SceneManager.LoadSceneAsync("Scene_02", LoadSceneMode.Additive);   //不需要在build and settings窗口中设置好，这里可以直接用
